@@ -3,8 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import App1 from './src/components/LocationDetails';
 import App2 from './src/components/MapDetails';
-import { Provider } from 'react-redux';
-import  store  from './src/app/store'
+
 
 
 
@@ -13,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-  <Provider store={store}>
+  
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="LocationDetails" component={App1}
@@ -44,7 +43,7 @@ export default function App() {
         
       </Stack.Navigator>
     </NavigationContainer>
-  </Provider>
+
     
   );
 }
