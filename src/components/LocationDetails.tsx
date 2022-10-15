@@ -36,12 +36,15 @@ export default class App1 extends React.Component{
           formatted: JSON.stringify(data.results[0].formatted) ,
           timestamp: JSON.stringify(data.timestamp.created_http)
         }
+        this.postExample()
         if(this.state.serverData.length<30){
         this.setState({
           
           currentData : [...[JSON.stringify(data.results[0].formatted),JSON.stringify(data.timestamp.created_http),JSON.stringify(data.results[0].geometry.lat),JSON.stringify(data.results[0].geometry.lag)]],
           serverData: [...[temp],...this.state.serverData],
           loading: false,
+        
+          
         });
         }
       })
@@ -50,6 +53,29 @@ export default class App1 extends React.Component{
       });
   }
   
+  requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ Location_name: 'this.state.currentData[0]',
+                           time: 'this.state.currentData[1]'
+                        })
+};
+
+  postExample = async () => {
+    try {
+        await fetch(
+            'https://httpstat.us/200', this.requestOptions)
+            .then(response => {
+                response.json()
+                    .then(data => {
+                       
+                    });
+            })
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
  
   deleteData2 = () => {
     this.state.serverData.splice(0,this.state.serverData.length)
