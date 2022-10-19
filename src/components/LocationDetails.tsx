@@ -97,7 +97,7 @@ export default class App1 extends React.Component{
       <SafeAreaView style={[{ width: "27%", marginLeft:255 }]}>
           <Button
             title="Go to map"
-            color='#000000'
+            color='#778899'
             onPress={() => { this.props.navigation.navigate('MapDetails') }}
           />
       </SafeAreaView>
@@ -137,7 +137,7 @@ export default class App1 extends React.Component{
             />
           <SafeAreaView style={[{  marginBottom:10 }]}>
           <Button
-            color="#000000"
+            color="#778899"
             title="Clear All"
             onPress={()=>this.deleteData2()}
 
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
       width:70,
       height:35,
       marginLeft: 250,
-      backgroundColor: "#DDDDDD",
+      backgroundColor: "#778899",
     },
     title2: {
         fontWeight: "600",

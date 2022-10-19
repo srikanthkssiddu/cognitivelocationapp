@@ -19,10 +19,10 @@ export default function App() {
           options={{
             title: 'Location Manager',
             headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#778899',
             
             },
-            headerTintColor: '#dcdcdc',
+            headerTintColor: '#000000',
             headerTitleStyle: {
             fontWeight: 'bold',
             },
@@ -31,10 +31,10 @@ export default function App() {
           options={{
             title: 'Map Details',
             headerStyle: {
-            backgroundColor: '#000000',
+            backgroundColor: '#778899',
             
             },
-            headerTintColor: '#dcdcdc',
+            headerTintColor: '#000000',
             headerTitleStyle: {
             fontWeight: 'bold',
             },
